@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --fp-bg: #1a2026;
+  --fp-surface: #272f37;
+  --fp-border: #3f5160;
+  --fp-text: #e4e9ed;
+  --fp-muted: #9aabb9;
+  --fp-accent: #3d6b7a;
+  --fp-danger: #c45c5c;
+}
+
+body {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  background: var(--fp-bg);
+  color: var(--fp-text);
+  min-height: 100vh;
+}
