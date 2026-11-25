@@ -1,7 +1,10 @@
 import type { AuditRun, ContractRate, DisputeLetter, Invoice } from "./types";
 
 const base =
-  import.meta.env.VITE_API_URL?.replace(/\/$/, "") ?? "";
+  (import.meta.env.VITE_API_URL || "https://freightproof-api.onrender.com").replace(
+    /\/$/,
+    "",
+  );
 
 async function req<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${base}${path}`, {

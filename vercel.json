@@ -1,0 +1,11 @@
+{
+  "framework": "vite",
+  "installCommand": "npm install --prefix web",
+  "buildCommand": "npm run build --prefix web",
+  "outputDirectory": "web/dist",
+  "rewrites": [
+    {"source":"/api/(.*)","destination":"https://freightproof-api.onrender.com/api/$1"},
+    {"source":"/health","destination":"https://freightproof-api.onrender.com/health"},
+    {"source":"/(.*)","destination":"/index.html"}
+  ]
+}
